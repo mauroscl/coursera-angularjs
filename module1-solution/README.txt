@@ -1,1 +1,0 @@
-This solution will contain the basic rules and the bonus improvements

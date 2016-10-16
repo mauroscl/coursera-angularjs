@@ -18,14 +18,16 @@
              <input id="lunch-menu" type="text"
              ng-model="dishes"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
+             class="form-control"
+             ng-style="inputStyle">
              <p>NOT considering and empty item, i.e., , ,</p>
 
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkLunch()" >Check If Too Much</button>
          </div>
-         <div class="form-group message">
+         <div class="form-group message" 
+              ng-style="messageStyle" >
            {{message}}
          </div>
    </div>

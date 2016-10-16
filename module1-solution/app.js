@@ -12,10 +12,12 @@
 
             var amountDishes = countDishes($scope.dishes);
 
-            changeStatus(amountDishes); 
+            evaluateLunch(amountDishes);
+
+            changeStyles(amountDishes); 
 
         };
-        
+
         function countDishes(dishesInWords){
 
             var separatorCharacter = ',';
@@ -32,9 +34,12 @@
             return dishesWithoutEmpty.length;
         }
 
-        function changeStatus(amountDishes){
+        function evaluateLunch(amountDishes){
+
             var greaterValueToEnjoy = 3;
+
             var message;
+
             if (amountDishes === 0) {
                 message = "Please enter data first";
             } else
@@ -45,6 +50,33 @@
             }
 
             $scope.message = message;
+
+        }
+
+        function changeStyles(amountDishes){
+
+            var inputStyle;
+            var messageStyle;
+
+            if (amountDishes > 0) {
+                inputStyle = {
+                    'border-color':'green'  
+                };
+                messageStyle = {
+                    'color': 'green'
+                };
+
+            } else {
+                inputStyle = {
+                    'border-color':'red'  
+                };
+                messageStyle = {
+                    'color': 'red'
+                };
+            }
+
+            $scope.inputStyle = inputStyle;
+            $scope.messageStyle = messageStyle;
 
         }
 
