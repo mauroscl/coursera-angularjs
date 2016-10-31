@@ -1,4 +1,5 @@
 (function () {
+    'use strict';    
     angular
         .module('NarrowItDownApp', [])
         .controller('NarrowItDownController', NarrowItDownController)
@@ -24,7 +25,7 @@
         };
 
         list.removeItem = function (itemIndex) {
-            list.found = list.found.splice(itemIndex, 1);
+            list.found.splice(itemIndex, 1);
         };
 
     }
@@ -32,8 +33,8 @@
     function FoundItemsDirective() {
 
         var ddo = {
-            templateUrl: 'itemsloaderindicator.template.html',
-            //template: 'eSta é e uma diretiva',
+            templateUrl: 'listItems.template.html',
+            //template: 'eSta é e uma diretiva' //,
             restrict: 'E',
             scope: {
                 foundItems: '<',

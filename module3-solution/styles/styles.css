@@ -50,3 +50,9 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+.action {
+  width: 200px;
+}
+.short{
+  width: 100px;
+}
