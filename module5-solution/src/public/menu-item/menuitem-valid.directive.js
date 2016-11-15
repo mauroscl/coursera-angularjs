@@ -24,7 +24,7 @@
 
                 var def = $q.defer();   
                 
-                MenuService.menuItemExists(modelValue.toUpperCase())
+                MenuService.getMenuItem(modelValue.toUpperCase())
                 .then(function(){
                     def.resolve(true);
                 })

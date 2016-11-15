@@ -1,0 +1,17 @@
+<h1>My Info</h1>
+<div ng-show="!infoCtrl.registration">
+    <span>Not Signed Up Yet. <a ui-sref="public.register">Sign up Now!</a> </span>
+</div>
+<div ng-show="infoCtrl.registration">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4>{{infoCtrl.registration.first_name}}, {{infoCtrl.registration.last_name}}</h4>
+            <h4>{{infoCtrl.registration.phone_number}}</h4>
+            <h4>{{infoCtrl.registration.email}}</h4>
+        </div>
+        <div class="col-md-6">
+            <menu-item-summarized menu-item="infoCtrl.favoriteDish"></menu-item-summarized>
+        </div>
+    </div>
+</div>
