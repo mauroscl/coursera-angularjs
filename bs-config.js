@@ -19,9 +19,9 @@ module.exports = {
             "port": 8080
         }
     },
-    "files": ['*.html', 'loader/*.html', 'scripts/*.js'],
+    "files": ['*.html', 'css/*.css', 'src/*.js'],
     "watchOptions": {},
-    "server": "module3-solution",
+    "server": "module5-solution",
     "proxy": false,
     "port": 3000,
     "middleware": false,
