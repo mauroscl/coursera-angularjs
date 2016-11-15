@@ -1,65 +1,65 @@
 <div class="form-container col-md-12">
-    <div class="col-md-8">
-            <h2>Registration</h2>
-            <form name="regForm" novalidate>
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="text" name="first_name" ng-model="registration.first_name" required placeholder="First Name">
-                        <span ng-if="regForm.first_name.$invalid && regForm.first_name.$touched">
+    <div class="col-md-8" ng-controller="RegistrationController as regCtrl">
+        <h2>Registration</h2>
+        <form name="regForm" novalidate>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="first_name" ng-model="regCtrl.registration.first_name" required placeholder="First Name">
+                    <span ng-if="regForm.first_name.$invalid && regForm.first_name.$touched">
                 First Name is required
             </span>
 
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="text" name="last_name" ng-model="registration.last_name" required placeholder="Last Name">
-                        <span ng-if="regForm.last_name.$invalid && regForm.last_name.$touched">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="last_name" ng-model="regCtrl.registration.last_name" required placeholder="Last Name">
+                    <span ng-if="regForm.last_name.$invalid && regForm.last_name.$touched">
                 Last Name is required
             </span>
 
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="email" name="email" placeholder="Email" ng-model="registration.email" required>
-                        <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="email" name="email" placeholder="Email" ng-model="regCtrl.registration.email" required>
+                    <span ng-if="regForm.email.$invalid && regForm.email.$touched">
                 Must be a valid email address: handle@domain format
             </span>
 
-                    </div>
                 </div>
+            </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="text" name="phone" ng-model="registration.phone_number" placeholder="Phone ###-###-####" required>
-                        <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="phone" ng-model="regCtrl.registration.phone_number" placeholder="Phone ###-###-####" required>
+                    <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
                 Phone must be in the format ###-###-####.
             </span>
 
-                    </div>
                 </div>
+            </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="text" name="favorite_dish" ng-model="registration.favorite_dish" ng-model-options="{ updateOn: 'blur' }" placeholder="Favorite Dish Code"
-                            required menuitemvalid>
-                        <span ng-if="regForm.favorite_dish.$error.menuitemvalid && regForm.favorite_dish.$touched">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="favorite_dish" ng-model="regCtrl.registration.favorite_dish" ng-model-options="{ updateOn: 'blur' }" placeholder="Favorite Dish Code"
+                        required menuitemvalid>
+                    <span ng-if="regForm.favorite_dish.$error.menuitemvalid && regForm.favorite_dish.$touched">
                 No such menu number exists.
             </span>
-                        <span ng-show="regForm.favorite_dish.$pending.menuitemvalid">Checking if code is valid...</span>
-                        <span ng-if="regForm.favorite_dish.$touched && regForm.favorite_dish.$error.required">Favorite Dish Code is required </span>
+                    <span ng-show="regForm.favorite_dish.$pending.menuitemvalid">Checking if code is valid...</span>
+                    <span ng-if="regForm.favorite_dish.$touched && regForm.favorite_dish.$error.required">Favorite Dish Code is required </span>
 
-
-                    </div>
-                </div>
-
-
-                <div class="row" style="text-align:center;">
-
-                    <button ng-disabled="regForm.$invalid" ng-click="regCtrl.submit()">Submit</button>
 
                 </div>
-            </form>
+            </div>
+
+
+            <div class="row" style="text-align:center;">
+
+                <button ng-disabled="regForm.$invalid" ng-click="regCtrl.submit()">Submit</button>
+
+            </div>
+        </form>
     </div>
 </div>

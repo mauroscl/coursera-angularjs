@@ -5,12 +5,13 @@
         .module('public')
         .controller('RegistrationController', RegistrationController);
 
-    //RegistrationController.$inject = ['dependency1'];
-    function RegistrationController(/*dependency1*/) {
-        var $ctrl = this;
+    RegistrationController.$inject = ['RegistrationService'];
+    function RegistrationController(RegistrationService) {
+        var regCtrl = this;
 
-        $ctrl.submit = function () {
+        regCtrl.submit = function () {
 
+            RegistrationService.registerUser(regCtrl.registration);
 
         };
     }

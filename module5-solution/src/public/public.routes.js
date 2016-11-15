@@ -43,9 +43,10 @@ function routeConfig ($stateProvider) {
     })
     .state('public.register', {
       url: '/register',
-      templateUrl: 'src/public/signup/registration.html',
-      controller: 'RegistrationController',
-      controllerAs: 'regCtrl'
+      templateUrl: 'src/public/signup/registration.html'
+      // ,
+      // controller: 'RegistrationController',
+      // controllerAs: 'regCtrl'
       
     })
     ;
